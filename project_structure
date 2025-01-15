@@ -1,0 +1,29 @@
+multimodal_few_shot/
+├── app/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   ├── api.py
+│   │   ├── main.py
+│   │   └── docs.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── image_models.py
+│   │   ├── video_models.py
+│   │   └── audio_models.py
+│   ├── services/
+│   │   ├── __init__.py
+│   │   ├── image_service.py
+│   │   ├── video_service.py
+│   │   └── audio_service.py
+│   ├── static/
+│   │   ├── css/
+│   │   ├── js/
+│   │   └── img/
+│   └── templates/
+│       ├── base.html
+│       ├── index.html
+│       └── docs.html
+├── requirements.txt
+└── run.py 

@@ -1,0 +1,9 @@
+flask==2.0.1
+tensorflow
+transformers==4.11.3
+opencv-python==4.5.3.56
+librosa==0.8.1
+numpy==1.21.2
+pillow==8.3.2
+python-dotenv==0.19.0
+flask-cors==3.0.10 

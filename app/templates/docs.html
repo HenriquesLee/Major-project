@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4">Documentation</h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#overview" class="list-group-item list-group-item-action">Overview</a>
+                <a href="#zero-shot" class="list-group-item list-group-item-action">Zero-Shot Learning</a>
+                <a href="#one-shot" class="list-group-item list-group-item-action">One-Shot Learning</a>
+                <a href="#few-shot" class="list-group-item list-group-item-action">Few-Shot Learning</a>
+                <a href="#api" class="list-group-item list-group-item-action">API Reference</a>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <section id="overview" class="mb-5">
+                <h2>Overview</h2>
+                <p>This application demonstrates different learning paradigms across multiple domains:</p>
+                <ul>
+                    <li>Image Analysis</li>
+                    <li>Video Analysis</li>
+                    <li>Audio Analysis</li>
+                </ul>
+            </section>
+
+            <section id="zero-shot" class="mb-5">
+                <h2>Zero-Shot Learning</h2>
+                <p>Zero-shot learning allows the model to make predictions for classes that were not seen during training.</p>
+                <h4>How to use:</h4>
+                <ol>
+                    <li>Select "Zero-Shot Learning" mode</li>
+                    <li>Upload your file</li>
+                    <li>Click "Analyze"</li>
+                </ol>
+            </section>
+
+            <section id="one-shot" class="mb-5">
+                <h2>One-Shot Learning</h2>
+                <p>One-shot learning uses a single example to learn and make predictions about new instances.</p>
+                <h4>How to use:</h4>
+                <ol>
+                    <li>Select "One-Shot Learning" mode</li>
+                    <li>Upload your query file</li>
+                    <li>Upload one example file</li>
+                    <li>Click "Analyze"</li>
+                </ol>
+            </section>
+
+            <section id="few-shot" class="mb-5">
+                <h2>Few-Shot Learning</h2>
+                <p>Few-shot learning uses a small number of examples to learn and make predictions.</p>
+                <h4>How to use:</h4>
+                <ol>
+                    <li>Select "Few-Shot Learning" mode</li>
+                    <li>Upload your query file</li>
+                    <li>Upload multiple example files</li>
+                    <li>Click "Analyze"</li>
+                </ol>
+            </section>
+
+            <section id="api" class="mb-5">
+                <h2>API Reference</h2>
+                <h4>Endpoint: /api/predict/&lt;domain&gt;/&lt;mode&gt;</h4>
+                <p>Parameters:</p>
+                <ul>
+                    <li><code>domain</code>: image, video, or audio</li>
+                    <li><code>mode</code>: zero-shot, one-shot, or few-shot</li>
+                    <li><code>file</code>: The query file to analyze</li>
+                    <li><code>example</code>: (For one-shot) The example file</li>
+                    <li><code>examples</code>: (For few-shot) Multiple example files</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %} 

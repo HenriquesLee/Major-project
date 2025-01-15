@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center mb-4">Multimodal Few-Shot Learning Lab</h1>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Image Analysis</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Learning Mode</label>
+                        <select class="form-select" id="image-mode">
+                            <option value="zero-shot">Zero-Shot Learning</option>
+                            <option value="one-shot">One-Shot Learning</option>
+                            <option value="few-shot">Few-Shot Learning</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Upload Image</label>
+                        <input type="file" class="form-control" id="image-input" accept="image/*">
+                    </div>
+                    <div id="image-examples" class="mb-3 d-none">
+                        <label class="form-label">Example Images</label>
+                        <input type="file" class="form-control" id="image-examples-input" accept="image/*" multiple>
+                    </div>
+                    <button class="btn btn-primary w-100" onclick="processImage()">Analyze</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Video Analysis</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Learning Mode</label>
+                        <select class="form-select" id="video-mode">
+                            <option value="zero-shot">Zero-Shot Learning</option>
+                            <option value="one-shot">One-Shot Learning</option>
+                            <option value="few-shot">Few-Shot Learning</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Upload Video</label>
+                        <input type="file" class="form-control" id="video-input" accept="video/*">
+                    </div>
+                    <div id="video-examples" class="mb-3 d-none">
+                        <label class="form-label">Example Videos</label>
+                        <input type="file" class="form-control" id="video-examples-input" accept="video/*" multiple>
+                    </div>
+                    <button class="btn btn-primary w-100" onclick="processVideo()">Analyze</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Audio Analysis</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Learning Mode</label>
+                        <select class="form-select" id="audio-mode">
+                            <option value="zero-shot">Zero-Shot Learning</option>
+                            <option value="one-shot">One-Shot Learning</option>
+                            <option value="few-shot">Few-Shot Learning</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Upload Audio</label>
+                        <input type="file" class="form-control" id="audio-input" accept="audio/*">
+                    </div>
+                    <div id="audio-examples" class="mb-3 d-none">
+                        <label class="form-label">Example Audio Files</label>
+                        <input type="file" class="form-control" id="audio-examples-input" accept="audio/*" multiple>
+                    </div>
+                    <button class="btn btn-primary w-100" onclick="processAudio()">Analyze</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Results</h5>
+                </div>
+                <div class="card-body">
+                    <pre id="results" class="bg-light p-3 rounded">Results will appear here...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %} 
