@@ -1,5 +1,5 @@
 import tensorflow as tf
-from transformers import TFVideoMAEModel, VideoMAEFeatureExtractor
+# from transformers import TFVideoMAEModel, VideoMAEFeatureExtractor
 from app.config import Config
 
 class VideoFeatureExtractor:

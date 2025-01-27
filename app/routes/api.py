@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from app.services.image_service import ImageService
-from app.services.video_service import VideoService
+# from app.services.video_service import VideoService
 from app.services.audio_service import AudioService
 
 api_bp = Blueprint('api', __name__)

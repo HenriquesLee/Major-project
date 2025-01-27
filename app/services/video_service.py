@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import tensorflow as tf
-from app.models.video_models import VideoProtoNet
+# from app.models.video_models import VideoProtoNet
 
 class VideoService:
     def __init__(self):
